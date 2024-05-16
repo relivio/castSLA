@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>com.castsoftware.uc.castSLA</id>
-        <version>1.4.0</version>
+        <version>1.4.2</version>
         <title>CAST SLA Jenkins Plugin</title>
         <authors>User Community</authors>
         <owners>CAST</owners>

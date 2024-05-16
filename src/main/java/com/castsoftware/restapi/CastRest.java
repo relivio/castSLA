@@ -300,13 +300,13 @@ public class CastRest {
 	public static int getPenultimateSnapshotId(String webServiceAddress, String login, String password, String aad,
 			int appId) throws RestException
 	{
-		return CastUtil.extractIdFromHref(getPenultimateSnapshot(webServiceAddress, login, password, aad, appId).href);
+		return CastUtil.extractIdFromHref(getPenultimateSnapshot(webServiceAddress, login, password, aad, appId).getHref());
 	}
 	
 	public static String getPenultimateSnapshotVersion(String webServiceAddress, String login, String password, String aad,
 			int appId) throws RestException
 	{
-		return getPenultimateSnapshot(webServiceAddress, login, password, aad, appId).annotation.getVersion();
+		return getPenultimateSnapshot(webServiceAddress, login, password, aad, appId).getAnnotation().getVersion();
 	}
 	
 	private static Snapshot getLastSnapshot(String webServiceAddress, String login, String password, String aad,
@@ -335,7 +335,7 @@ public class CastRest {
 					latestSnapshot = s;
 				else 
 				{
-					if (latestSnapshot.annotation.getDate().getTime() < s.annotation.getDate().getTime())
+					if (latestSnapshot.getAnnotation().getDate().getTime() < s.getAnnotation().getDate().getTime())
 						latestSnapshot = s;
 				}								
 			}
@@ -355,7 +355,7 @@ public class CastRest {
 	{
 		Snapshot s = getLastSnapshot(webServiceAddress, login, password, aad, appId,prodOnly);
 		if (s!=null) {
-			return CastUtil.extractIdFromHref(s.href);
+			return CastUtil.extractIdFromHref(s.getHref());
 		} else {
 			return 0;
 		}
@@ -366,7 +366,7 @@ public class CastRest {
 	{
 		Snapshot s = getLastSnapshot(webServiceAddress, login, password, aad, appId,prodOnly);
 		if (s!=null) {
-			return s.annotation.getVersion();
+			return s.getAnnotation().getVersion();
 		} else {
 			return "";
 		}

@@ -22,22 +22,22 @@ public class HealthFactorConditionParam  extends AbstractDescribableImpl<HealthF
     
     private static final List<String> metrics = new ArrayList<String>(Arrays.asList(
     		"TQI","Transferability","Changeability",
-    		"Robustness","Performance","Security",
+    		"Robustness","Performance","Security","Green IT Index",
     		"Critical Violations", "Critical Violations on new and modified code"));
     
     private static final List<Integer> metricIds = new ArrayList<Integer>(Arrays.asList(
     		60017, 60011, 60012, 
-    		60013, 60014, 60016, 
+    		60013, 60014, 60016, 20140522,
     		67011, 67015));
     
     private static final List<String> metricGroups = new ArrayList<String>(Arrays.asList(
     		"quality-indicators", "quality-indicators", "quality-indicators", 
-    		"quality-indicators", "quality-indicators", "quality-indicators", 
+    		"quality-indicators", "quality-indicators", "quality-indicators", "quality-indicators", 
     		"sizing-measures", "sizing-measures"));
     
     private static final List<String> metricFields = new ArrayList<String>(Arrays.asList(
     		"grade", "grade", "grade", 
-    		"grade", "grade", "grade", 
+    		"grade", "grade", "grade", "grade", 
     		"value", "value"));
    
     private static final List<String> operators = new ArrayList<String>(Arrays.asList(

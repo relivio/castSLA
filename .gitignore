@@ -1,3 +1,4 @@
 /work/
 /*.nupkg
 /target/
+/.apt_generated/
